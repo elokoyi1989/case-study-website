@@ -1,2 +1,1 @@
-# case-study-website
-accesiblecomponent
+nothing here
