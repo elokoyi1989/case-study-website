@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redesigning for Accessibility: A UX Case Study</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Redesigning for Accessibility</h1>
+    <p class="subtitle">A UX Case Study on the Mac File Navigator Dropdown</p>
+    <nav>
+      <ul>
+        <li><a href="#overview">Project Background</a></li>
+        <li><a href="#analysis">Analysis</a></li>
+        <li><a href="#redesign">Redesign</a></li>
+        <li><a href="#reflection">Reflection</a></li>
+        <li><a href="#takeaways">Conclusion</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section id="overview">
+      <h2>Project Background</h2>
+      <p>This case study focuses on the research and prototyping work I did to assess the accessibility challenges found in dropdown menus. I looked at the component across different platforms 
+        —particularly in the Mac File Navigator—and the steps I took to address them.
+         While components like the dropdown might appear simple or intuitive, they can often exclude users relying on keyboards or screen readers. My main goals were to identify gaps in dropdown functionality, consider tradeoffs and
+         compromises, and propose and design a more inclusive solution.</p>
+    </section>
+
+    <section id="analysis">
+      <h2>Accessibility Audit</h2>
+      <p>I took a look at and evaluated the dropdown menus in three applications: Netflix, Youtube, and the Mac file navigator. Here are photos of each of the components
+        in different states, along with my observations.</p>
+      </p>
+        
+      <img src="src/Netflix2.png"    alt="Netflix original"  >
+      <img src="src/Filetoollbar.png" height="700 px"   alt="file tool bar"  >
+      <img src="src/youtube.png" height="700 px" alt=" Youtube original"  >
+
+      <p> I compiled my observations into two tables that looked at the output and input state. My observations revealed a 
+        pattern of prioritizing mouse users especially on the web-based streaming platforms.</p>
+      <img src="src/Screenshot 2025-05-09 at 2.31.26 PM.png"   alt="Inpuet dropdown interface">
+      <img src="src/Screenshot 2025-05-09 at 2.32.38 PM.png"  alt="Output interaction states">
+    </section>
+
+    <section id="redesign">
+      <h2>Redesign Approach</h2>
+      <p>I chose to take a closer look at and redesign the Mac File Navigator dropdown with the goal of making it easier for those using keyboards or assistive technologies.</p>
+
+
+      <p>Before approaching my redesign, I had to create detailed state models of what the user experience looks like with as much detail as possible. First,
+        I created a state model for the mouse and keyboard interaction in the original dropdown. This included the default state, the focused state, and the expanded action state.</p>
+      </p>
+
+
+        <img src="src/initialmouse-keyboar.jpeg" alt="Mouse and keyboard interaction state model">
+
+
+        <p>Next, I created a state model intentionally creating tradeoffs to make certain things easier for keyboard users.</p>
+
+        <img src="src/revisedtradeoffs.jpeg" alt="Tradeoff state model">
+
+        <p> Considering the potential tradeoffs and improvements, I created two designs for the default and expanded state of the Mac File Toolbar.</p>
+
+      <img src="src/New-d.png" alt="New dropdown interface">
+
+      <h3>Initial State Enhancements</h3>
+      <ul>
+        <li>Maintaining Visible focus ring for keyboard and mouse users</li>
+        <li>Adding more robust and detailed ARIA label</li>
+        <li>Focusing on the most recent or most frequent otion upon opening the dropdown</li>
+      </ul>
+
+      <h3>Expanded State Improvements</h3>
+      <ul>
+        <li>Typing the first letter of an option automatically executes the option for efficiency</li>
+        <li>Arrow key as well first-letter navigation</li>
+        <li>Clear highlight on focused or selected options</li>
+      </ul>
+
+      <p>These changes all work together to make the dropdown easier to use regardless of how someone might interact with their device.</p>
+    </section>
+
+    <section id="reflection">
+      <h2>Reflection and Takeaways</h2>
+      <p>Through evaluating dropdown components across platforms, I observed that many drop-downs perform well in certain areas of usability and accessibility.</p>
+      <ul>
+        <li>They mostly include a visible keyboard focus ring and basic arrow key navigation.</li>
+        <li>These features made the component accessible at a surface level.</li>
+      </ul>
+    
+      <p>However, my redesign built on that foundation by improving how the dropdown responds to using the keyboard or a screen reader.</p>
+    
+      <p>While the dropdowns were good for keyboard users, they still favored mouse users in terms of efficiency and effectiveness.</p>
+      <p>Using Kat Holmes’ concept of “mismatch,” I can understand how my revisions attempted to address the mismatch for keyboard users of seeing all the options and wanting to immediately execute the desired option.</p>
+      <ul>
+        <li>Mouse users can click what they want, almost like grabbing, whereas keyboard users have to cycle through options even though they know what they want.</li>
+        <li>Allowing users to navigate by typing the first letter empowers both screen reader and keyboard users with faster, more predictable control.</li>
+        <li>It also streamlines use for everyone else.</li>
+      </ul>
+    
+      <p>Reflecting on my analysis from Parts 1 and 2, two things stood out:</p>
+      <ul>
+        <li>Firstly, the Netflix dropdown navigation was connected to the whole page, making it difficult to backtrack or reconsider different options on the page.</li>
+        <li>Another inaccessibility issue is the lack of clarity as to how to actually select a focused option.</li>
+      </ul>      
+    </section>
+
+    <section id="takeaways">
+      <h2>Conclusion</h2>
+      <p>It’s clear that among mouse, keyboard, touch, and screen reader users, mouse users are prioritized in specific component design. This bias makes interfaces inflexible and inaccessible. This project offered me the insight that accessibility isn’t about unnecessary extra features, but about considering all of the possible ways the world could exist for anyone. 
+        </p>
+    </section>
+  </div>
+
+</body>
+</html>

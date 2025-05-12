@@ -1,0 +1,22 @@
+{
+  "name": "case-study-website",
+  "version": "1.0.0",
+  "description": "A website to display a case study.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build step not defined'",
+    "test": "echo 'No tests defined'"
+  },
+  "keywords": [
+    "case study",
+    "website",
+    "project"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
